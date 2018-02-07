@@ -1,6 +1,7 @@
 FROM centos:latest
 MAINTAINER Mark Athow (mark.athow@gmail.com)
 
+RUN yum -y install openssh-clients
 RUN curl -s -L --output pdk.rpm \
  "https://pm.puppetlabs.com/cgi-bin/pdk_download.cgi?dist=el&rel=7&arch=x86_64&ver=latest" && \
   rpm -i pdk.rpm && \
